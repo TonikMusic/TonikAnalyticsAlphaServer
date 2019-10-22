@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const EmailSchema = new Schema({
+const EmailListSchema = new Schema({
+  firstName: {
+    type: String,
+    required: true
+  },
   email: {
     type: String,
     required: true,
@@ -10,7 +14,7 @@ const EmailSchema = new Schema({
   }
 });
 
-module.exports = Email = mongoose.model(
-  EmailSchema,
-  'Email'
+module.exports = EmailList = mongoose.model(
+  'EmailList',
+  EmailListSchema
 );
